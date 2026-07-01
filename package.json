@@ -1,0 +1,36 @@
+{
+  "name": "manage-projects",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "build:pages": "GITHUB_PAGES=true vue-tsc -b && GITHUB_PAGES=true vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@vee-validate/zod": "^4.15.1",
+    "axios": "^1.18.1",
+    "pinia": "^3.0.4",
+    "sass": "^1.101.0",
+    "vee-validate": "^4.15.1",
+    "vue": "^3.5.39",
+    "vue-router": "^5.1.0",
+    "vuedraggable": "^4.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.9.1",
+    "happy-dom": "^17.4.4",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1",
+    "vitest": "^3.0.9",
+    "vue-tsc": "^3.3.5"
+  }
+}

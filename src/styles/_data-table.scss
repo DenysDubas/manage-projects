@@ -1,0 +1,31 @@
+@use 'variables' as *;
+
+@mixin data-table-base {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  td {
+    padding: 0.875rem 1rem;
+    border-bottom: 1px solid $color-border;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__row {
+    transition: background $transition;
+
+    &:hover {
+      background: rgb(37 99 235 / 6%);
+    }
+  }
+}
+
+@mixin data-table-row-clickable {
+  @include data-table-base;
+
+  .data-table__row {
+    cursor: pointer;
+  }
+}

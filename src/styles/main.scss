@@ -1,0 +1,178 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  color: $color-text;
+  background: $color-bg;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+
+  &__title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  &__link {
+    color: $color-primary;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  &__title {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    margin: 0.25rem 0 0;
+    color: $color-muted;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+}
+
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-bottom: 1px solid $color-border;
+}
+
+.view-toggle {
+  display: inline-flex;
+  padding: 0.25rem;
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  &__btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: calc(#{$radius-md} - 2px);
+    background: transparent;
+    color: $color-muted;
+    cursor: pointer;
+    transition: background $transition, color $transition;
+
+    &--active {
+      background: $color-surface;
+      color: $color-text;
+      box-shadow: $shadow-sm;
+    }
+  }
+}
+
+.loading-state,
+.empty-state,
+.error-state {
+  padding: 2rem;
+  text-align: center;
+  color: $color-muted;
+}
+
+.error-state {
+  color: $color-danger;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.25s ease;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
