@@ -2,7 +2,7 @@
 
 SPA для управління проектами та завданнями. Тестове завдання рівня Middle+.
 
-**Live demo:** після деплою на GitHub Pages — `https://<username>.github.io/manage-projects/`
+**Live demo:** після деплою на GitHub Pages — `https://denysdubas.github.io/manage-projects/`
 
 ## Запуск
 
