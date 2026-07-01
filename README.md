@@ -1,6 +1,6 @@
 # Manage Projects
 
-SPA для управління проектами та завданнями. Тестове завдання рівня Middle+.
+SPA для управління проектами та завданнями
 
 **Live demo:** після деплою на GitHub Pages — `https://denysdubas.github.io/manage-projects/`
 
