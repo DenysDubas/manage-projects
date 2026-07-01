@@ -141,6 +141,7 @@ views/
 3. Push в `main` — workflow `.github/workflows/deploy.yml` задеплоїть автоматично
 
 `vite.config.ts` використовує `base: '/manage-projects/'` при `GITHUB_PAGES=true`.
+При білді для Pages автоматично створюється `404.html` (копія `index.html`) — це потрібно для коректного refresh на deep links (`/projects/1`).
 
 ## Структура проекту
 
