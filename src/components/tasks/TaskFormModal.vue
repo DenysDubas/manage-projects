@@ -41,7 +41,7 @@ const { defineField, errors, handleSubmit, isSubmitting, resetForm, setValues } 
     },
   })
 
-const [name, nameAttrs] = defineField('name', { validateOnBlur: true })
+const [name, nameAttrs] = defineField('name', { validateOnBlur: true, validateOnModelUpdate: true })
 const [assignee, assigneeAttrs] = defineField('assignee', { validateOnBlur: true })
 const [status, statusAttrs] = defineField('status', { validateOnBlur: true })
 const [deadline, deadlineAttrs] = defineField('deadline', { validateOnBlur: true })

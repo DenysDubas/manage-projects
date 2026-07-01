@@ -26,7 +26,7 @@ const { defineField, errors, handleSubmit, isSubmitting, resetForm } = useForm<P
   },
 })
 
-const [name, nameAttrs] = defineField('name', { validateOnBlur: true })
+const [name, nameAttrs] = defineField('name', { validateOnBlur: true, validateOnModelUpdate: true })
 const [description, descriptionAttrs] = defineField('description', { validateOnBlur: true })
 
 const onSubmit = handleSubmit(async (values) => {

@@ -6,7 +6,8 @@ export const projectFormSchema = z.object({
   name: z
     .string({ required_error: "Поле обов'язкове" })
     .trim()
-    .min(2, "Поле обов'язкове")
+    .min(1, "Поле обов'язкове")
+    .min(2, 'Мінімум 2 символи')
     .max(100, 'Максимум 100 символів'),
   description: z.string().optional(),
 })
@@ -16,7 +17,8 @@ export function createTaskFormSchema(isEditing: boolean) {
     name: z
       .string({ required_error: "Поле обов'язкове" })
       .trim()
-      .min(3, "Поле обов'язкове")
+      .min(1, "Поле обов'язкове")
+      .min(3, 'Мінімум 3 символи')
       .max(120, 'Максимум 120 символів'),
     assignee: z.string().nullable().optional(),
     status: z.enum([TaskStatus.TODO, TaskStatus.IN_PROGRESS, TaskStatus.DONE], {
